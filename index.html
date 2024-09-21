@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #drawing-board {
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container-class w-[100%] min-h-screen bg-zinc-700 flex items-center justify-center overflow-auto">
+        <div id="toolbar" class="top-4 left-10 mb-4 w-[10%] flex flex-col gap-5 bg-zinc-500 p-4">
+            <h1 class="text-white text-[40px] font-bold">Draw</h1>
+            <label class="border-2 border-white p-2 text-white rounded-lg" for="stroke">Stroke</label>
+            <input id="stroke" name="stroke" type="color" >
+            <label class="border-2 border-white p-2 text-white rounded-lg" for="lineWidth">Line Width</label>
+            <input id="lineWidth" name="lineWidth" type="number" value="5" >
+            <button class="border-2 border-white bg-red-700 p-2 text-white rounded-lg text-[20px]" id="clear">Clear</button>
+        </div>
+        <div class="drawing-board bg-white w-[95%] h-[100%] mx-4 rounded-lg overflow-auto">
+            <canvas id="drawing-board"></canvas>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
